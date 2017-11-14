@@ -1,12 +1,8 @@
-Feature: Authentication
+Feature: Login
 
-    Scenario Outline: User logs in
+    Scenario: User logs in
       Given I open insurance website
-      When I log in as "<username>"
-      Then I should see the message <auth message>
-
-      Examples: Users
-        | username          | auth message               |
-        | registeredUser    | The meaning of life is 42  |
-        | unregisteredUser  | Please sign up             |
+      When I log in as "registeredUser"
+      Then I wait for "15" seconds
+      Then I should see the logout button
 

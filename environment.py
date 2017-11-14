@@ -10,7 +10,7 @@ chrome_options.add_experimental_option('prefs',{
 })
 
 def before_all(context):
-    chrome_binary = '/Users/apple/.npm-global/bin/chromedriver'
+    chrome_binary = 'chromedriver'
     context.browser = webdriver.Chrome(executable_path=chrome_binary, chrome_options=chrome_options)
     context.browser.maximize_window()
 
